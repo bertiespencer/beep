@@ -5,7 +5,7 @@ package generators
 import (
 	"math"
 	"errors"
-	. "github.com/faiface/beep"
+	. "github.com/bertiespencer/beep"
 )
 
 // simple sinusoid tone generator
@@ -19,7 +19,7 @@ type toneStreamer struct {
 // sampleRate must be at least two times grater then frequency, otherwise this function will return an error
 func SinTone(sr SampleRate, freq int) (Streamer, error) {
 	if int(sr)/freq < 2 {
-		return nil, errors.New("faiface beep tone generator: samplerate must be at least 2 times grater then frequency")
+		return nil, errors.New("bertiespencer beep tone generator: samplerate must be at least 2 times grater then frequency")
 	}
 	r := new(toneStreamer)
 	r.stat = 0.0

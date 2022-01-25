@@ -1,4 +1,4 @@
-module github.com/faiface/beep
+module github.com/bertiespencer/beep
 
 go 1.14
 

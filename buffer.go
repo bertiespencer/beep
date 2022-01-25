@@ -167,6 +167,10 @@ type Buffer struct {
 	tmp  []byte
 }
 
+func (b *Buffer) GetData() []byte {
+	return b.data
+}
+
 // NewBuffer creates a new empty Buffer which stores samples in the provided format.
 func NewBuffer(f Format) *Buffer {
 	return &Buffer{f: f, tmp: make([]byte, f.Width())}
